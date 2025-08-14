@@ -1,0 +1,1 @@
+{ "profiles": { "Payments.WebApi": { "commandName": "Project", "dotnetRunMessages": true, "launchBrowser": true, "applicationUrl": "https://localhost:5002;http://localhost:50020", "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development", "ORDERS__BaseUrl": "https://localhost:5003/", "NEXI__ApiBase": "https://test.api.dibspayment.eu" } } } }

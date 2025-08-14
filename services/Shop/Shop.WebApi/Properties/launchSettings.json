@@ -1,0 +1,1 @@
+{ "profiles": { "Shop.WebApi": { "commandName": "Project", "dotnetRunMessages": true, "launchBrowser": true, "applicationUrl": "https://localhost:5001;http://localhost:50010", "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development", "ORDERS__BaseUrl": "https://localhost:5003/", "PAYMENTS__BaseUrl": "https://localhost:5002/" } } } }

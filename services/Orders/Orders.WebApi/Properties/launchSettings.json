@@ -1,0 +1,1 @@
+{ "profiles": { "Orders.WebApi": { "commandName": "Project", "dotnetRunMessages": true, "launchBrowser": true, "applicationUrl": "https://localhost:5003;http://localhost:50030", "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" } } } }
