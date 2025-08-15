@@ -15,6 +15,7 @@ public class Order
     public OrderStatus Status { get; private set; } = OrderStatus.Pending;
     public DateTime CreatedAtUtc { get; private set; } = DateTime.UtcNow;
     public List<OrderLine> Lines { get; private set; } = new();
+    private Order() { } // ← EF uses this
     public Order(string userId, string currency, decimal subtotal, decimal tax, decimal shipping, decimal total)
     { UserId = userId; Currency = currency; SubtotalNet = subtotal; Tax = tax; Shipping = shipping; TotalGross = total; Status = OrderStatus.Pending; }
     public void SetPaymentId(string paymentId) => PaymentId = paymentId;

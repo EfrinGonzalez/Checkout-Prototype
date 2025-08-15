@@ -1,4 +1,4 @@
-namespace Payments.Domain;
+﻿namespace Payments.Domain;
 
 public enum PaymentStatus { Initiated, Authorized, Failed, Captured }
 
@@ -11,6 +11,8 @@ public class PaymentIntent
     public string HostedPaymentPageUrl { get; private set; } = null!;
     public PaymentStatus Status { get; private set; } = PaymentStatus.Initiated;
     public DateTime CreatedAtUtc { get; private set; } = DateTime.UtcNow;
+    private PaymentIntent() { } // ← EF uses this
+
     public PaymentIntent(string paymentId, Guid orderId, string currency, int amountMinor, string hostedUrl)
     { PaymentId = paymentId; OrderId = orderId; Currency = currency; AmountMinor = amountMinor; HostedPaymentPageUrl = hostedUrl; }
     public void MarkAuthorized() => Status = PaymentStatus.Authorized;
